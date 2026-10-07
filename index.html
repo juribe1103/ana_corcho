@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificación Médica - Ana Corcho</title>
+    <style>
+        :root {
+            --primary-red: #d32f2f;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border-top: 6px solid var(--primary-red);
+        }
+
+        .header {
+            background-color: var(--primary-red);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .alert-box {
+            background-color: #ffebee;
+            border-left: 4px solid var(--primary-red);
+            padding: 12px;
+            border-radius: 4px;
+            color: #c62828;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .info-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: var(--text-main);
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--primary-red);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: opacity 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .btn:active {
+            opacity: 0.8;
+        }
+
+        .btn-call {
+            background-color: #2e7d32;
+            color: white;
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+        }
+
+        .contact-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Ana Corcho</h1>
+            <p>EPS: Sanitas - Alerta Médica</p>
+        </div>
+
+        <div class="content">
+            <!-- Alergias -->
+            <div class="section">
+                <div class="section-title">⚠️ Alergias Críticas</div>
+                <div class="alert-box">
+                    ÁCIDO ACETIL SALICÍLICO - AINES - PENICILINAS
+                </div>
+            </div>
+
+            <!-- Condiciones y Medicamentos -->
+            <div class="section">
+                <div class="section-title">Conditiones y Medicamentos</div>
+                <ul class="info-text">
+                    <li><strong>Diabetes:</strong> Jardiance Dúo 12.5mg/1000mg. Ozempic (Semaglutida) 1mg semanal (Pénz azul).</li>
+                    <li><strong>Hipertensión:</strong> Irbesartán 150mg (1 al día), Amlodipino 5mg (1 por la noche).</li>
+                    <li><strong>Hipotiroidismo:</strong> Levotiroxina 75mcg (1 al día).</li>
+                </ul>
+            </div>
+
+            <!-- Contactos de Emergencia -->
+            <div class="section">
+                <div class="section-title">Contactos de Emergencia</div>
+                
+                <div class="btn-container">
+                    <div>
+                        <div class="contact-label">Hija: Merlín Ruiz</div>
+                        <a href="tel:3132238737" class="btn btn-call">
+                            📞 Llamar a Merlín (313 223 8737)
+                        </a>
+                    </div>
+
+                    <div style="margin-top: 8px;">
+                        <div class="contact-label">Hija: Ana Milena Ruiz</div>
+                        <a href="tel:3232877100" class="btn btn-call">
+                            📞 Llamar a Ana Milena (323 287 7100)
+                        </a>
+                    </div>
+
+                    <div style="margin-top: 8px;">
+                        <div class="contact-label">Esposo</div>
+                        <a href="tel:3135216353" class="btn btn-call">
+                            📞 Llamar al Esposo (313 521 6353)
+                        </a>
+                    </div>
+
+                    <div style="margin-top: 12px;">
+                        <a href="https://wa.me/573132238737?text=Hola,%20escribo%20por%20una%20emergencia%20médica%20de%20Ana%20Corcho" target="_blank" class="btn btn-whatsapp">
+                            💬 Contactar por WhatsApp (Merlín)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
